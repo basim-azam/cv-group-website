@@ -531,7 +531,7 @@ h4 {
   height: 180px;
   object-fit: cover;
   border-radius: 5px;
-  border: 2px solid var(--unimelb-blue);
+  border: 1px solid var(--unimelb-blue);
 }
 
 .faculty-info h3 {
@@ -599,7 +599,7 @@ h4 {
   border-radius: 50%;
   margin: 0 auto 15px;
   overflow: hidden;
-  border: 2px solid var(--unimelb-blue);
+  border: 1px solid var(--unimelb-blue);
   background: #ddd;
 }
 
@@ -890,6 +890,13 @@ h4 {
 
 .join-section {
   border-left: 4px solid var(--unimelb-blue);
+}
+
+.location-image {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 5px;
+  margin-bottom: 15px;
 }
 
 /* Footer */
