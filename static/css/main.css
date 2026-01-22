@@ -966,7 +966,14 @@ pre {
 .person-degree {
   font-size: var(--text-sm);
   color: var(--primary-blue);
+  margin-bottom: var(--spacing-xs);
+}
+
+.person-thesis {
+  font-size: var(--text-sm);
+  color: var(--grey-medium);
   margin-bottom: var(--spacing-sm);
+  line-height: 1.4;
 }
 
 .person-bio-short {

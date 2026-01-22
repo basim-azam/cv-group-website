@@ -66,14 +66,14 @@
               </a>
               {{ end }}
               {{ with .google_scholar }}
-              {{ if ne . "#" }}
+              {{ if and (ne . "#") (ne . "") }}
               <a href="{{ . }}" target="_blank" rel="noopener" class="link-item" title="Google Scholar">
                 <i class="fas fa-graduation-cap"></i>
               </a>
               {{ end }}
               {{ end }}
               {{ with .website }}
-              {{ if ne . "#" }}
+              {{ if and (ne . "#") (ne . "") }}
               <a href="{{ . }}" target="_blank" rel="noopener" class="link-item" title="Website">
                 <i class="fas fa-globe"></i>
               </a>
@@ -103,7 +103,10 @@
           </div>
           <div class="person-info">
             <h3 class="person-name">{{ .name }}</h3>
-            <p class="person-degree">{{ .degree }} &middot; {{ .year }}</p>
+            <p class="person-degree">{{ .degree }}{{ with .start_date }} &middot; Since {{ . }}{{ end }}</p>
+            {{ with .thesis_title }}
+            <p class="person-thesis"><em>{{ . }}</em></p>
+            {{ end }}
             <p class="person-bio-short">{{ .bio }}</p>
             <div class="person-interests-inline">
               {{ range .research_interests }}
@@ -117,16 +120,23 @@
               </a>
               {{ end }}
               {{ with .google_scholar }}
-              {{ if ne . "#" }}
+              {{ if and (ne . "#") (ne . "") }}
               <a href="{{ . }}" target="_blank" rel="noopener" class="link-item" title="Google Scholar">
                 <i class="fas fa-graduation-cap"></i>
               </a>
               {{ end }}
               {{ end }}
               {{ with .website }}
-              {{ if ne . "#" }}
+              {{ if and (ne . "#") (ne . "") }}
               <a href="{{ . }}" target="_blank" rel="noopener" class="link-item" title="Website">
                 <i class="fas fa-globe"></i>
+              </a>
+              {{ end }}
+              {{ end }}
+              {{ with .linkedin }}
+              {{ if and (ne . "#") (ne . "") }}
+              <a href="{{ . }}" target="_blank" rel="noopener" class="link-item" title="LinkedIn">
+                <i class="fab fa-linkedin"></i>
               </a>
               {{ end }}
               {{ end }}
@@ -138,17 +148,18 @@
     </section>
 
     <!-- Masters Students Section -->
+    {{ with .Site.Data.people.masters_students }}
     <section class="people-section" id="masters-students">
       <h2 class="section-title">Masters Students</h2>
       <div class="people-grid">
-        {{ range .Site.Data.people.masters_students }}
+        {{ range . }}
         <div class="person-card">
           <div class="person-photo">
             <img src="{{ .photo }}" alt="{{ .name }}" onerror="this.src='/images/people/default-avatar.svg'">
           </div>
           <div class="person-info">
             <h3 class="person-name">{{ .name }}</h3>
-            <p class="person-degree">{{ .degree }} &middot; {{ .year }}</p>
+            <p class="person-degree">{{ .degree }}{{ with .start_date }} &middot; Since {{ . }}{{ end }}</p>
             <p class="person-bio-short">{{ .bio }}</p>
             <div class="person-interests-inline">
               {{ range .research_interests }}
@@ -167,6 +178,7 @@
         {{ end }}
       </div>
     </section>
+    {{ end }}
 
     <!-- Alumni Section -->
     {{ with .Site.Data.people.alumni }}
