@@ -49,7 +49,7 @@
       {{ range .Site.Data.publications.publications }}
         {{ $years = $years | append .year }}
       {{ end }}
-      {{ $uniqueYears := uniq $years | sort | reverse }}
+      {{ $uniqueYears := sort (uniq $years) "value" "desc" }}
 
       {{ range $year := $uniqueYears }}
       <div class="year-section" data-year="{{ $year }}">
