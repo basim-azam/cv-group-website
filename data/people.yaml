@@ -6,7 +6,7 @@ faculty:
     title: "ARC DECRA Fellow, Senior Lecturer"
     affiliation: "School of Computing and Information Systems, The University of Melbourne"
     email: "naveed.akhtar1@unimelb.edu.au"
-    photo: "/images/people/naveed-akhtar.jpg"
+    photo: "images/people/naveed-akhtar.jpg"
     bio: |
       Dr. Akhtar is a computer vision and machine learning scientist with research interests in
       deep learning-based visual modeling. He is an ARC DECRA Fellow and has previously served
@@ -36,7 +36,7 @@ phd_students:
     degree: "PhD Student"
     start_date: "2024"
     email: "ali.alrasheed@student.unimelb.edu.au"
-    photo: "/images/people/ali-alrasheed.jpg"
+    photo: "images/people/ali-alrasheed.jpg"
     thesis_title: "Learning Latent World Models for Sequential Decision-Making"
     bio: "Ali Alrasheed completed a Master's degree in Computer Science from Georgia Institute of Technology and a Bachelor's degree in Mechatronics Engineering from the University of Manchester. He previously worked as a research engineer at Saudi Aramco. His research focuses on world models and VLM."
     research_interests:
@@ -51,7 +51,7 @@ phd_students:
     degree: "PhD Student"
     start_date: "2024"
     email: "khawar.islam@student.unimelb.edu.au"
-    photo: "/images/people/khawar-islam.jpg"
+    photo: "images/people/khawar-islam.jpg"
     thesis_title: "Towards Effective Multi-modal Foundation Models"
     bio: "Khawar Islam is a Senior Scientist – Autonomy AI at Neubility, Seoul, South Korea. Previously, he worked as a Research Scientist – AI at CoreMax Technology and served as Chief Technology Officer (CTO) for GenAI at Upendi.app. Khawar holds an MS in Computer Engineering from Sejong University, where he specialised in Computer Vision and Deep Learning."
     research_interests:
@@ -66,7 +66,7 @@ phd_students:
     degree: "PhD Student"
     start_date: "2025"
     email: "soyoun.won@student.unimelb.edu.au"
-    photo: "/images/people/soyoun-won.jpg"
+    photo: "images/people/soyoun-won.jpg"
     thesis_title: "Analyzing Effects of Training Strategies on Interpretability of Neural Networks"
     bio: "Soyoun Won double-majored in Astronomy and Computer Science in bachelor's and received Master's degree in Computer Science. She is interested in building human-centered safe AI that is interpretable and transparent for human users."
     research_interests:
@@ -82,7 +82,7 @@ phd_students:
     degree: "PhD Student"
     start_date: "2025"
     email: "tony.trinh@student.unimelb.edu.au"
-    photo: "/images/people/tony-trinh.jpg"
+    photo: "images/people/tony-trinh.jpg"
     thesis_title: "Advancing Responsible Generative AI in Computer Vision"
     bio: "Tony Trinh is a PhD candidate specializing in adversarial AI with over 13 years of experience in software development, cloud computing, and AI. Before his PhD, he was a Senior Specialist Solution Architect at Amazon in the US. He holds a Bachelor's in Information Systems (summa cum laude) and a Graduate Diploma in Analytics (first class). He is the author of the AWS Certified Machine Learning Engineer Associate Study Guide."
     research_interests:
@@ -98,7 +98,7 @@ phd_students:
     degree: "PhD Student"
     start_date: "2024"
     email: "heethanjan.kanagalingam@student.unimelb.edu.au"
-    photo: "/images/people/heethanjan-kanagalingam.jpg"
+    photo: "images/people/heethanjan-kanagalingam.jpg"
     thesis_title: "On Effective Adaptation of Foundation Models"
     bio: "Heethanjan Kanagalingam holds a Bachelor's degree in Electronic and Telecommunication Engineering from the University of Moratuwa, Sri Lanka. His interests lie in visual reasoning, domain generalization, and few-shot learning."
     research_interests:
@@ -114,7 +114,7 @@ phd_students:
     degree: "PhD Student"
     start_date: "2024"
     email: "mohammed.ansari@student.unimelb.edu.au"
-    photo: "/images/people/ishaq-ansari.jpg"
+    photo: "images/people/ishaq-ansari.jpg"
     thesis_title: "Responsible Use of Generative AI"
     bio: "Mohammed Ishaq Ansari completed his B.S. in Electrical and Computer Engineering at Texas A&M University Qatar after initially studying Computer Science at Carnegie Mellon University Qatar. His research focuses on deep learning, computer vision, and multi-robot systems, with publications in IEEE Access and other prestigious venues."
     research_interests:
@@ -130,7 +130,7 @@ phd_students:
     degree: "PhD Student"
     start_date: "2025"
     email: "kasra.kamali@student.unimelb.edu.au"
-    photo: "/images/people/kasra-kamali.jpg"
+    photo: "images/people/kasra-kamali.jpg"
     thesis_title: "Towards Responsible Generative Visual Modeling"
     bio: "Kasra Kamali completed his Master of Science at Sharif University of Technology, following his Bachelor of Science at Ferdowsi University of Mashhad, both in Electrical Engineering. During his master's degree, he worked on sign language translation. His research interests mainly lie at the intersection of visual and language modeling."
     research_interests:
@@ -146,7 +146,7 @@ phd_students:
     degree: "PhD Student"
     start_date: "2024"
     email: "aryan.yazdanparast@student.unimelb.edu.au"
-    photo: "/images/people/aryan-yazdanparast.jpg"
+    photo: "images/people/aryan-yazdanparast.jpg"
     thesis_title: "Improving Robustness of Machine Perception by Intervention"
     bio: "Aryan Yazdan Parast earned his bachelor's degree in computer engineering from Sharif University in Iran. His research focuses on machine learning, deep learning, and the robustness of AI models."
     research_interests:
@@ -164,7 +164,7 @@ masters_students:
   #   degree: "Masters Student"
   #   start_date: "2024"
   #   email: "email@student.unimelb.edu.au"
-  #   photo: "/images/people/student-name.jpg"
+  #   photo: "images/people/student-name.jpg"
   #   bio: "Brief bio..."
   #   research_interests:
   #     - "Area 1"
@@ -177,4 +177,4 @@ alumni:
   #   graduation_year: 2024
   #   thesis_title: "Thesis Title"
   #   current_position: "Current Position at Company/University"
-  #   photo: "/images/people/alumni-name.jpg"
+  #   photo: "images/people/alumni-name.jpg"

@@ -17,7 +17,7 @@
         {{ range .Site.Data.people.faculty }}
         <div class="person-card person-card--faculty">
           <div class="person-photo">
-            <img src="{{ .photo }}" alt="{{ .name }}" onerror="this.src='/images/people/default-avatar.svg'">
+            <img src="{{ .photo | relURL }}" alt="{{ .name }}" onerror="this.src='{{ "images/people/default-avatar.svg" | relURL }}'">
           </div>
           <div class="person-info">
             <h3 class="person-name">{{ .name }}</h3>
@@ -99,7 +99,7 @@
         {{ range .Site.Data.people.phd_students }}
         <div class="person-card">
           <div class="person-photo">
-            <img src="{{ .photo }}" alt="{{ .name }}" onerror="this.src='/images/people/default-avatar.svg'">
+            <img src="{{ .photo | relURL }}" alt="{{ .name }}" onerror="this.src='{{ "images/people/default-avatar.svg" | relURL }}'">
           </div>
           <div class="person-info">
             <h3 class="person-name">{{ .name }}</h3>
@@ -155,7 +155,7 @@
         {{ range . }}
         <div class="person-card">
           <div class="person-photo">
-            <img src="{{ .photo }}" alt="{{ .name }}" onerror="this.src='/images/people/default-avatar.svg'">
+            <img src="{{ .photo | relURL }}" alt="{{ .name }}" onerror="this.src='{{ "images/people/default-avatar.svg" | relURL }}'">
           </div>
           <div class="person-info">
             <h3 class="person-name">{{ .name }}</h3>
