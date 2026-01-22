@@ -1,0 +1,644 @@
+/* ============================================
+   Computer Vision Group - University of Melbourne
+   VGG-Style Minimal Academic Theme
+   ============================================ */
+
+/* Color Variables */
+:root {
+  --unimelb-blue: #003366;
+  --unimelb-blue-light: #0055A4;
+  --unimelb-blue-dark: #001A33;
+  --text-dark: #333333;
+  --text-muted: #666666;
+  --bg-light: #f8f9fa;
+  --border-color: #dee2e6;
+  --link-color: #0055A4;
+}
+
+/* Base Styles */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text-dark);
+  background-color: #fff;
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--unimelb-blue);
+  text-decoration: underline;
+}
+
+/* Header */
+.site-header {
+  background: #fff;
+  border-bottom: 3px solid var(--unimelb-blue);
+  padding: 15px 0;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  text-decoration: none;
+}
+
+.logo-link:hover {
+  text-decoration: none;
+}
+
+.logo {
+  height: 50px;
+  width: auto;
+}
+
+.site-title .title {
+  display: block;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--unimelb-blue);
+  line-height: 1.2;
+}
+
+.site-title .subtitle {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* Navigation */
+.main-nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+.main-nav a {
+  display: block;
+  padding: 8px 15px;
+  color: var(--text-dark);
+  font-weight: 500;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+  background-color: var(--unimelb-blue);
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Main Content */
+.main-content {
+  padding: 40px 0;
+  min-height: calc(100vh - 250px);
+}
+
+/* Section Styles */
+section {
+  margin-bottom: 40px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+section:last-child {
+  border-bottom: none;
+}
+
+h1 {
+  font-size: 1.8rem;
+  color: var(--unimelb-blue);
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--unimelb-blue);
+}
+
+h2 {
+  font-size: 1.4rem;
+  color: var(--unimelb-blue);
+  margin-bottom: 20px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+h3 {
+  font-size: 1.2rem;
+  color: var(--unimelb-blue-dark);
+  margin-bottom: 15px;
+}
+
+h4 {
+  font-size: 1rem;
+  color: var(--text-dark);
+  margin-bottom: 8px;
+}
+
+.lead {
+  font-size: 1.1rem;
+  color: var(--text-dark);
+}
+
+/* Quick Links */
+.quick-links {
+  background: var(--bg-light);
+  padding: 20px;
+  border-radius: 5px;
+  border-left: 4px solid var(--unimelb-blue);
+}
+
+.quick-links h3 {
+  margin-top: 0;
+  font-size: 1.1rem;
+}
+
+.quick-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.quick-links li {
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.quick-links li:last-child {
+  border-bottom: none;
+}
+
+.quick-links i {
+  width: 20px;
+  color: var(--unimelb-blue);
+  margin-right: 8px;
+}
+
+/* Research Items */
+.research-item {
+  padding: 15px;
+  background: var(--bg-light);
+  border-radius: 5px;
+  height: 100%;
+}
+
+.research-item h4 {
+  color: var(--unimelb-blue);
+}
+
+.research-item h4 i {
+  margin-right: 8px;
+}
+
+.research-item p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+/* News List */
+.news-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.news-list li {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  gap: 15px;
+}
+
+.news-list li:last-child {
+  border-bottom: none;
+}
+
+.news-date {
+  font-weight: 600;
+  color: var(--unimelb-blue);
+  min-width: 80px;
+  flex-shrink: 0;
+}
+
+.news-text {
+  color: var(--text-dark);
+}
+
+/* Publication List */
+.pub-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pub-list li {
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.pub-list li:last-child {
+  border-bottom: none;
+}
+
+.pub-title {
+  display: block;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.pub-authors {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.pub-venue {
+  display: block;
+  font-size: 0.9rem;
+  font-style: italic;
+  color: var(--unimelb-blue);
+}
+
+.pub-links {
+  margin-top: 5px;
+}
+
+.pub-links a {
+  font-size: 0.85rem;
+  margin-right: 15px;
+}
+
+.pub-links i {
+  margin-right: 4px;
+}
+
+.section-link {
+  margin-top: 15px;
+  font-weight: 500;
+}
+
+/* People Page */
+.faculty-section {
+  margin-bottom: 40px;
+}
+
+.faculty-card {
+  display: flex;
+  gap: 25px;
+  padding: 20px;
+  background: var(--bg-light);
+  border-radius: 5px;
+  margin-bottom: 25px;
+}
+
+.faculty-photo {
+  flex-shrink: 0;
+}
+
+.faculty-photo img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 5px;
+  border: 3px solid var(--unimelb-blue);
+}
+
+.faculty-info h3 {
+  margin-top: 0;
+  color: var(--unimelb-blue);
+}
+
+.faculty-title {
+  color: var(--unimelb-blue-light);
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.faculty-affiliation {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+}
+
+.faculty-bio {
+  margin-bottom: 15px;
+}
+
+.interests-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.interest-tag {
+  background: #fff;
+  border: 1px solid var(--unimelb-blue);
+  color: var(--unimelb-blue);
+  padding: 3px 10px;
+  border-radius: 15px;
+  font-size: 0.8rem;
+}
+
+.faculty-links a {
+  margin-right: 15px;
+}
+
+.faculty-links i {
+  margin-right: 5px;
+}
+
+/* Student Grid */
+.students-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.student-card {
+  padding: 20px;
+  background: var(--bg-light);
+  border-radius: 5px;
+  text-align: center;
+}
+
+.student-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin: 0 auto 15px;
+  overflow: hidden;
+  border: 3px solid var(--unimelb-blue);
+  background: #ddd;
+}
+
+.student-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.student-card h4 {
+  margin-bottom: 5px;
+  color: var(--unimelb-blue);
+}
+
+.student-degree {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+}
+
+.student-thesis {
+  font-size: 0.85rem;
+  font-style: italic;
+  color: var(--text-dark);
+  margin-bottom: 10px;
+}
+
+.student-interests {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.student-interests .interest-tag {
+  font-size: 0.75rem;
+  padding: 2px 8px;
+}
+
+.student-links a {
+  margin: 0 8px;
+  color: var(--text-muted);
+}
+
+.student-links a:hover {
+  color: var(--unimelb-blue);
+}
+
+/* Research Page */
+.research-area {
+  padding: 20px;
+  background: var(--bg-light);
+  border-radius: 5px;
+  margin-bottom: 20px;
+  border-left: 4px solid var(--unimelb-blue);
+}
+
+.research-area h3 {
+  margin-top: 0;
+}
+
+.research-area h3 i {
+  margin-right: 10px;
+  color: var(--unimelb-blue);
+}
+
+.topics-list {
+  list-style: disc;
+  padding-left: 20px;
+  margin: 15px 0;
+}
+
+.topics-list li {
+  padding: 3px 0;
+}
+
+/* Publications Page */
+.year-section {
+  margin-bottom: 30px;
+}
+
+.year-heading {
+  font-size: 1.3rem;
+  color: var(--unimelb-blue);
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--unimelb-blue);
+  margin-bottom: 15px;
+}
+
+.publication-entry {
+  padding: 15px;
+  background: var(--bg-light);
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.publication-entry .pub-title {
+  font-size: 1rem;
+}
+
+.pub-type {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 3px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-left: 10px;
+}
+
+.pub-type.conference {
+  background: #e3f2fd;
+  color: #1565c0;
+}
+
+.pub-type.journal {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+/* News Page */
+.news-entry {
+  padding: 15px 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.news-entry:last-child {
+  border-bottom: none;
+}
+
+.news-entry .news-date {
+  font-size: 0.9rem;
+}
+
+.news-entry h3 {
+  margin: 5px 0 10px;
+  font-size: 1.1rem;
+}
+
+.news-entry p {
+  color: var(--text-muted);
+  margin: 0;
+}
+
+/* Contact Page */
+.contact-section {
+  padding: 20px;
+  background: var(--bg-light);
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.contact-section h3 {
+  margin-top: 0;
+}
+
+.contact-section h3 i {
+  margin-right: 10px;
+  color: var(--unimelb-blue);
+}
+
+.join-section {
+  border-left: 4px solid var(--unimelb-blue);
+}
+
+/* Footer */
+.site-footer {
+  background: var(--unimelb-blue);
+  color: #fff;
+  padding: 30px 0 20px;
+  margin-top: auto;
+}
+
+.site-footer a {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.site-footer a:hover {
+  color: #fff;
+}
+
+.site-footer hr {
+  border-color: rgba(255, 255, 255, 0.2);
+  margin: 20px 0;
+}
+
+.site-footer .affiliation {
+  margin: 0;
+  line-height: 1.8;
+}
+
+.site-footer .contact-info {
+  margin: 0;
+  line-height: 2;
+}
+
+.site-footer .contact-info i {
+  margin-right: 8px;
+}
+
+.site-footer .copyright {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .main-nav ul {
+    justify-content: center;
+  }
+
+  .faculty-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .faculty-photo img {
+    margin: 0 auto;
+  }
+
+  .interests-list {
+    justify-content: center;
+  }
+
+  .news-list li {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .news-date {
+    min-width: auto;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .site-header,
+  .site-footer {
+    background: #fff;
+    color: #000;
+  }
+
+  .main-nav {
+    display: none;
+  }
+
+  a {
+    color: #000;
+  }
+}
