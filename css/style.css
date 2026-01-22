@@ -241,6 +241,36 @@ a:hover {
   font-weight: 500;
 }
 
+.update-badge {
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
+.update-badge.paper {
+  background: #e3f2fd;
+  color: #1565c0;
+}
+
+.update-badge.award {
+  background: #fff3e0;
+  color: #e65100;
+}
+
+.update-badge.team {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.update-badge.service {
+  background: #f3e5f5;
+  color: #7b1fa2;
+}
+
 .updates-list {
   list-style: none;
   padding: 0;
@@ -693,6 +723,116 @@ h4 {
 
 .news-minimal h2:first-child {
   margin-top: 0;
+}
+
+/* News Page - Enhanced Design */
+.news-year-section {
+  margin-bottom: 30px;
+  border-bottom: none;
+}
+
+.news-year {
+  font-size: 1.5rem;
+  color: var(--unimelb-blue);
+  margin-bottom: 20px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--unimelb-blue);
+}
+
+.news-items {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.news-item {
+  display: flex;
+  gap: 20px;
+  padding: 15px;
+  background: var(--bg-light);
+  border-radius: 5px;
+  border-left: 3px solid var(--unimelb-blue);
+}
+
+.news-meta {
+  flex-shrink: 0;
+  min-width: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.news-item .news-date {
+  font-weight: 600;
+  color: var(--unimelb-blue);
+  font-size: 0.85rem;
+}
+
+.news-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 8px;
+  border-radius: 3px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  width: fit-content;
+}
+
+.news-badge i {
+  font-size: 0.65rem;
+}
+
+.news-badge.paper {
+  background: #e3f2fd;
+  color: #1565c0;
+}
+
+.news-badge.award {
+  background: #fff3e0;
+  color: #e65100;
+}
+
+.news-badge.team {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.news-badge.service {
+  background: #f3e5f5;
+  color: #7b1fa2;
+}
+
+.news-content {
+  flex: 1;
+}
+
+.news-content strong {
+  display: block;
+  color: var(--text-dark);
+  margin-bottom: 5px;
+  font-size: 1rem;
+}
+
+.news-content p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .news-item {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .news-meta {
+    flex-direction: row;
+    align-items: center;
+    min-width: auto;
+  }
 }
 
 /* Contact Page */
