@@ -107,8 +107,110 @@ a:hover {
 
 /* Main Content */
 .main-content {
-  padding: 40px 0;
+  padding: 0;
   min-height: calc(100vh - 250px);
+}
+
+/* Hero Banner */
+.hero-banner {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0, 51, 102, 0.9));
+  padding: 60px 0 30px;
+}
+
+.hero-overlay h1 {
+  color: #fff;
+  font-size: 2.5rem;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+/* About Section */
+.about-section {
+  padding-top: 30px;
+}
+
+/* Navigation Cards */
+.nav-cards {
+  padding: 20px 0 30px;
+}
+
+.nav-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 20px;
+  background: var(--bg-light);
+  border-radius: 8px;
+  text-align: center;
+  text-decoration: none;
+  color: var(--unimelb-blue);
+  transition: all 0.2s ease;
+  margin-bottom: 15px;
+}
+
+.nav-card:hover {
+  background: var(--unimelb-blue);
+  color: #fff;
+  text-decoration: none;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 51, 102, 0.2);
+}
+
+.nav-card i {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.nav-card span {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+/* Updates Section */
+.updates-section {
+  padding-bottom: 30px;
+}
+
+.updates-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 15px 0;
+}
+
+.updates-list li {
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.updates-list li:last-child {
+  border-bottom: none;
+}
+
+.updates-list strong {
+  color: var(--unimelb-blue);
 }
 
 /* Section Styles */

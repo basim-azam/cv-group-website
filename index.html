@@ -42,11 +42,21 @@
 
   <!-- Main Content -->
   <main class="main-content">
+
+    <!-- Hero Section with Campus Image -->
+    <section class="hero-banner">
+      <img src="images/campus-welcome.jpg" alt="University of Melbourne Campus" class="hero-image">
+      <div class="hero-overlay">
+        <div class="container">
+          <h1>Welcome</h1>
+        </div>
+      </div>
+    </section>
+
     <div class="container">
 
-      <!-- Welcome Section -->
-      <section class="welcome-section">
-        <h1>Welcome</h1>
+      <!-- About Section -->
+      <section class="about-section">
         <p class="lead">
           The Computer Vision Group at The University of Melbourne conducts research
           in computer vision, machine learning, and artificial intelligence.
@@ -58,53 +68,46 @@
         </p>
       </section>
 
-      <!-- Research Areas - Compact -->
-      <section class="research-section-minimal">
-        <h2>Research</h2>
-        <p>
-          <a href="research.html#adversarial">Adversarial Machine Learning</a> ·
-          <a href="research.html#xai">Explainable AI</a> ·
-          <a href="research.html#pointcloud">3D Point Clouds</a> ·
-          <a href="research.html#medical">Medical Imaging</a> ·
-          <a href="research.html#remote">Remote Sensing</a> ·
-          <a href="research.html#generative">Responsible Generative AI</a>
-        </p>
-        <p><a href="research.html">More about our research &rarr;</a></p>
+      <!-- Navigation Cards -->
+      <section class="nav-cards">
+        <div class="row">
+          <div class="col-md-3 col-6">
+            <a href="people.html" class="nav-card">
+              <i class="fas fa-users"></i>
+              <span>People</span>
+            </a>
+          </div>
+          <div class="col-md-3 col-6">
+            <a href="publications.html" class="nav-card">
+              <i class="fas fa-book"></i>
+              <span>Publications</span>
+            </a>
+          </div>
+          <div class="col-md-3 col-6">
+            <a href="news.html" class="nav-card">
+              <i class="fas fa-newspaper"></i>
+              <span>News</span>
+            </a>
+          </div>
+          <div class="col-md-3 col-6">
+            <a href="contact.html#join" class="nav-card">
+              <i class="fas fa-user-plus"></i>
+              <span>Join Us</span>
+            </a>
+          </div>
+        </div>
       </section>
 
-      <!-- News - Minimal inline style -->
-      <section class="news-section-minimal">
-        <h2>News</h2>
-        <table class="news-table">
-          <tr>
-            <td class="news-date">Jan 2025</td>
-            <td>Paper accepted at <strong>CVPR 2025</strong> on responsible generative AI</td>
-          </tr>
-          <tr>
-            <td class="news-date">Sep 2024</td>
-            <td>Two papers accepted at <strong>ECCV 2024</strong></td>
-          </tr>
-          <tr>
-            <td class="news-date">Jul 2024</td>
-            <td>New PhD students join the group</td>
-          </tr>
-          <tr>
-            <td class="news-date">Jan 2024</td>
-            <td>Paper accepted at <strong>AAAI 2024</strong></td>
-          </tr>
-        </table>
+      <!-- Latest Updates -->
+      <section class="updates-section">
+        <h2>Latest</h2>
+        <ul class="updates-list">
+          <li><strong>Jan 2025:</strong> Paper accepted at CVPR 2025 on responsible generative AI</li>
+          <li><strong>Sep 2024:</strong> Two papers accepted at ECCV 2024</li>
+          <li><strong>Jul 2024:</strong> New PhD students join the group</li>
+          <li><strong>Jan 2024:</strong> Paper accepted at AAAI 2024</li>
+        </ul>
         <p><a href="news.html">All news &rarr;</a></p>
-      </section>
-
-      <!-- Quick Links -->
-      <section class="links-section">
-        <h2>Links</h2>
-        <p>
-          <a href="people.html"><i class="fas fa-users"></i> People</a> ·
-          <a href="publications.html"><i class="fas fa-book"></i> Publications</a> ·
-          <a href="https://scholar.google.com/citations?user=Xqmlj18AAAAJ" target="_blank"><i class="fas fa-graduation-cap"></i> Google Scholar</a> ·
-          <a href="contact.html#join"><i class="fas fa-envelope"></i> Join Us</a>
-        </p>
       </section>
 
     </div>
