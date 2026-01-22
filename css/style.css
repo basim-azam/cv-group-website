@@ -146,6 +146,14 @@ a:hover {
   border: none;
 }
 
+.hero-tagline {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.1rem;
+  margin: 8px 0 0 0;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+}
+
 /* About Section */
 .about-section {
   padding-top: 30px;
@@ -192,6 +200,45 @@ a:hover {
 /* Updates Section */
 .updates-section {
   padding-bottom: 30px;
+}
+
+.updates-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.update-item {
+  display: flex;
+  align-items: baseline;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.update-item:last-child {
+  border-bottom: none;
+}
+
+.update-date {
+  min-width: 80px;
+  font-weight: 600;
+  color: var(--unimelb-blue);
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+.update-text {
+  color: var(--text-dark);
+  font-size: 0.95rem;
+}
+
+.update-text strong {
+  color: var(--unimelb-blue);
+}
+
+.updates-more {
+  margin-top: 15px;
+  font-weight: 500;
 }
 
 .updates-list {
