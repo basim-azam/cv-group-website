@@ -506,28 +506,44 @@ h4 {
   color: #2e7d32;
 }
 
-/* News Page */
-.news-entry {
-  padding: 15px 0;
+/* News Table - Minimal Style */
+.news-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 15px;
+}
+
+.news-table td {
+  padding: 8px 0;
+  vertical-align: top;
   border-bottom: 1px solid var(--border-color);
 }
 
-.news-entry:last-child {
+.news-table tr:last-child td {
   border-bottom: none;
 }
 
-.news-entry .news-date {
+.news-table .news-date {
+  width: 70px;
+  font-weight: 500;
+  color: var(--unimelb-blue);
   font-size: 0.9rem;
 }
 
-.news-entry h3 {
-  margin: 5px 0 10px;
-  font-size: 1.1rem;
+.news-section-minimal,
+.research-section-minimal,
+.links-section {
+  padding-bottom: 20px;
 }
 
-.news-entry p {
-  color: var(--text-muted);
-  margin: 0;
+.news-minimal h2 {
+  font-size: 1.2rem;
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
+.news-minimal h2:first-child {
+  margin-top: 0;
 }
 
 /* Contact Page */
