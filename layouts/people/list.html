@@ -1,0 +1,195 @@
+{{ define "main" }}
+<section class="people-page">
+  <div class="container">
+    <header class="page-header">
+      <h1 class="page-title">Our Team</h1>
+      <p class="page-description">
+        Meet the researchers and students driving innovation in computer vision at the University of Melbourne.
+      </p>
+    </header>
+
+    {{ .Content }}
+
+    <!-- Faculty Section -->
+    <section class="people-section" id="faculty">
+      <h2 class="section-title">Faculty</h2>
+      <div class="faculty-grid">
+        {{ range .Site.Data.people.faculty }}
+        <div class="person-card person-card--faculty">
+          <div class="person-photo">
+            <img src="{{ .photo }}" alt="{{ .name }}" onerror="this.src='/images/people/default-avatar.svg'">
+          </div>
+          <div class="person-info">
+            <h3 class="person-name">{{ .name }}</h3>
+            <p class="person-title">{{ .title }}</p>
+            <p class="person-affiliation">{{ .affiliation }}</p>
+
+            <div class="person-bio">
+              {{ .bio | markdownify }}
+            </div>
+
+            <div class="person-interests">
+              <h4>Research Interests</h4>
+              <ul class="interest-list">
+                {{ range .research_interests }}
+                <li>{{ . }}</li>
+                {{ end }}
+              </ul>
+            </div>
+
+            {{ with .honors }}
+            <div class="person-honors">
+              <h4>Honors & Awards</h4>
+              <ul>
+                {{ range . }}
+                <li>{{ . }}</li>
+                {{ end }}
+              </ul>
+            </div>
+            {{ end }}
+
+            {{ with .service }}
+            <div class="person-service">
+              <h4>Academic Service</h4>
+              <ul>
+                {{ range . }}
+                <li>{{ . }}</li>
+                {{ end }}
+              </ul>
+            </div>
+            {{ end }}
+
+            <div class="person-links">
+              {{ with .email }}
+              <a href="mailto:{{ . }}" class="link-item" title="Email">
+                <i class="fas fa-envelope"></i>
+              </a>
+              {{ end }}
+              {{ with .google_scholar }}
+              {{ if ne . "#" }}
+              <a href="{{ . }}" target="_blank" rel="noopener" class="link-item" title="Google Scholar">
+                <i class="fas fa-graduation-cap"></i>
+              </a>
+              {{ end }}
+              {{ end }}
+              {{ with .website }}
+              {{ if ne . "#" }}
+              <a href="{{ . }}" target="_blank" rel="noopener" class="link-item" title="Website">
+                <i class="fas fa-globe"></i>
+              </a>
+              {{ end }}
+              {{ end }}
+            </div>
+
+            {{ with .citations }}
+            <p class="person-stats">
+              <i class="fas fa-quote-right"></i> {{ . }} citations
+            </p>
+            {{ end }}
+          </div>
+        </div>
+        {{ end }}
+      </div>
+    </section>
+
+    <!-- PhD Students Section -->
+    <section class="people-section" id="phd-students">
+      <h2 class="section-title">PhD Students</h2>
+      <div class="people-grid">
+        {{ range .Site.Data.people.phd_students }}
+        <div class="person-card">
+          <div class="person-photo">
+            <img src="{{ .photo }}" alt="{{ .name }}" onerror="this.src='/images/people/default-avatar.svg'">
+          </div>
+          <div class="person-info">
+            <h3 class="person-name">{{ .name }}</h3>
+            <p class="person-degree">{{ .degree }} &middot; {{ .year }}</p>
+            <p class="person-bio-short">{{ .bio }}</p>
+            <div class="person-interests-inline">
+              {{ range .research_interests }}
+              <span class="interest-tag">{{ . }}</span>
+              {{ end }}
+            </div>
+            <div class="person-links">
+              {{ with .email }}
+              <a href="mailto:{{ . }}" class="link-item" title="Email">
+                <i class="fas fa-envelope"></i>
+              </a>
+              {{ end }}
+              {{ with .google_scholar }}
+              {{ if ne . "#" }}
+              <a href="{{ . }}" target="_blank" rel="noopener" class="link-item" title="Google Scholar">
+                <i class="fas fa-graduation-cap"></i>
+              </a>
+              {{ end }}
+              {{ end }}
+              {{ with .website }}
+              {{ if ne . "#" }}
+              <a href="{{ . }}" target="_blank" rel="noopener" class="link-item" title="Website">
+                <i class="fas fa-globe"></i>
+              </a>
+              {{ end }}
+              {{ end }}
+            </div>
+          </div>
+        </div>
+        {{ end }}
+      </div>
+    </section>
+
+    <!-- Masters Students Section -->
+    <section class="people-section" id="masters-students">
+      <h2 class="section-title">Masters Students</h2>
+      <div class="people-grid">
+        {{ range .Site.Data.people.masters_students }}
+        <div class="person-card">
+          <div class="person-photo">
+            <img src="{{ .photo }}" alt="{{ .name }}" onerror="this.src='/images/people/default-avatar.svg'">
+          </div>
+          <div class="person-info">
+            <h3 class="person-name">{{ .name }}</h3>
+            <p class="person-degree">{{ .degree }} &middot; {{ .year }}</p>
+            <p class="person-bio-short">{{ .bio }}</p>
+            <div class="person-interests-inline">
+              {{ range .research_interests }}
+              <span class="interest-tag">{{ . }}</span>
+              {{ end }}
+            </div>
+            <div class="person-links">
+              {{ with .email }}
+              <a href="mailto:{{ . }}" class="link-item" title="Email">
+                <i class="fas fa-envelope"></i>
+              </a>
+              {{ end }}
+            </div>
+          </div>
+        </div>
+        {{ end }}
+      </div>
+    </section>
+
+    <!-- Alumni Section -->
+    {{ with .Site.Data.people.alumni }}
+    <section class="people-section" id="alumni">
+      <h2 class="section-title">Alumni</h2>
+      <div class="alumni-list">
+        {{ range . }}
+        <div class="alumni-item">
+          <span class="alumni-name">{{ .name }}</span>
+          <span class="alumni-degree">{{ .degree }}, {{ .graduation_year }}</span>
+          {{ with .current_position }}
+          <span class="alumni-position">Now: {{ . }}</span>
+          {{ end }}
+        </div>
+        {{ end }}
+      </div>
+    </section>
+    {{ else }}
+    <section class="people-section" id="alumni">
+      <h2 class="section-title">Alumni</h2>
+      <p class="empty-section">Alumni information will be added soon.</p>
+    </section>
+    {{ end }}
+  </div>
+</section>
+{{ end }}

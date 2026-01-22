@@ -1,0 +1,55 @@
+{{ define "main" }}
+{{ $themeId := .Params.theme_id }}
+{{ $theme := index (where .Site.Data.research_themes.themes "id" $themeId) 0 }}
+
+<article class="research-area-page">
+  <div class="container">
+    <header class="page-header">
+      <div class="breadcrumb">
+        <a href="/research/">Research</a> / <span>{{ .Title }}</span>
+      </div>
+      <h1 class="page-title">{{ .Title }}</h1>
+      {{ with $theme.short_description }}
+      <p class="page-subtitle">{{ . }}</p>
+      {{ end }}
+    </header>
+
+    <div class="page-content">
+      {{ with $theme }}
+      <section class="area-description">
+        {{ .description | markdownify }}
+      </section>
+
+      {{ with .key_topics }}
+      <section class="key-topics">
+        <h2>Key Research Topics</h2>
+        <ul class="topics-list">
+          {{ range . }}
+          <li>{{ . }}</li>
+          {{ end }}
+        </ul>
+      </section>
+      {{ end }}
+
+      {{ with .featured_publications }}
+      <section class="featured-publications">
+        <h2>Featured Publications</h2>
+        <ul class="publication-list">
+          {{ range . }}
+          <li>{{ . }}</li>
+          {{ end }}
+        </ul>
+        <p><a href="/publications/">View all publications</a></p>
+      </section>
+      {{ end }}
+      {{ end }}
+
+      {{ .Content }}
+    </div>
+
+    <div class="page-nav">
+      <a href="/research/" class="btn btn-outline"><i class="fas fa-arrow-left"></i> Back to Research</a>
+    </div>
+  </div>
+</article>
+{{ end }}

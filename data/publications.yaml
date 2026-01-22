@@ -1,0 +1,236 @@
+# Computer Vision Group - Publications
+# Edit this file to add/modify publications
+# For complete publication list, visit Google Scholar
+
+publications:
+  # 2025 Publications
+  - title: "Mono3DVLT: Monocular-Video-Based 3D Visual Language Tracking"
+    authors:
+      - "Hongkai Wei"
+      - "Yang Yang"
+      - "Shijie Sun"
+      - "Mingtao Feng"
+      - "Xiangyu Song"
+      - "Qi Lei"
+      - "Hongli Hu"
+      - "Rong Wang"
+      - "Huansheng Song"
+      - "Naveed Akhtar"
+      - "Ajmal Mian"
+    venue: "CVPR"
+    venue_full: "IEEE/CVF Conference on Computer Vision and Pattern Recognition"
+    year: 2025
+    type: "conference"
+    paper_url: "#"
+    code_url: ""
+    project_url: ""
+    bibtex: |
+      @inproceedings{wei2025mono3dvlt,
+        title={Mono3DVLT: Monocular-Video-Based 3D Visual Language Tracking},
+        author={Wei, Hongkai and Yang, Yang and Sun, Shijie and Feng, Mingtao and Song, Xiangyu and Lei, Qi and Hu, Hongli and Wang, Rong and Song, Huansheng and Akhtar, Naveed and Mian, Ajmal},
+        booktitle={CVPR},
+        year={2025}
+      }
+
+  - title: "Motion-Grounded Video Reasoning: Understanding and Perceiving Motion at Pixel Level"
+    authors:
+      - "Andong Deng"
+      - "Tongjia Chen"
+      - "Shoubin Yu"
+      - "Taojiannan Yang"
+      - "Lincoln Spencer"
+      - "Yapeng Tian"
+      - "Ajmal Mian"
+      - "Mohit Bansal"
+      - "Chen Chen"
+    venue: "CVPR"
+    venue_full: "IEEE/CVF Conference on Computer Vision and Pattern Recognition"
+    year: 2025
+    type: "conference"
+    paper_url: "#"
+    code_url: ""
+    project_url: ""
+    bibtex: |
+      @inproceedings{deng2025motion,
+        title={Motion-Grounded Video Reasoning: Understanding and Perceiving Motion at Pixel Level},
+        author={Deng, Andong and Chen, Tongjia and Yu, Shoubin and Yang, Taojiannan and Spencer, Lincoln and Tian, Yapeng and Mian, Ajmal and Bansal, Mohit and Chen, Chen},
+        booktitle={CVPR},
+        year={2025}
+      }
+
+  - title: "Beyond Human Perception: Understanding Multi-Object World from Monocular View"
+    authors:
+      - "Keyu Guo"
+      - "Yongle Huang"
+      - "Shijie Sun"
+      - "Xiangyu Song"
+      - "Mingtao Feng"
+      - "Zedong Liu"
+      - "Huansheng Song"
+      - "Tiantian Wang"
+      - "Jianxin Li"
+      - "Naveed Akhtar"
+      - "Ajmal Mian"
+    venue: "CVPR"
+    venue_full: "IEEE/CVF Conference on Computer Vision and Pattern Recognition"
+    year: 2025
+    type: "conference"
+    paper_url: "#"
+    code_url: ""
+    project_url: ""
+    bibtex: |
+      @inproceedings{guo2025beyond,
+        title={Beyond Human Perception: Understanding Multi-Object World from Monocular View},
+        author={Guo, Keyu and Huang, Yongle and Sun, Shijie and Song, Xiangyu and Feng, Mingtao and Liu, Zedong and Song, Huansheng and Wang, Tiantian and Li, Jianxin and Akhtar, Naveed and Mian, Ajmal},
+        booktitle={CVPR},
+        year={2025}
+      }
+
+  # 2024 Publications
+  - title: "Regulating Model Reliance on Non-robust Features by Smoothing Input Marginal Density"
+    authors:
+      - "Peiyu Yang"
+      - "Naveed Akhtar"
+      - "Mubarak Shah"
+      - "Ajmal Mian"
+    venue: "ECCV"
+    venue_full: "European Conference on Computer Vision"
+    year: 2024
+    type: "conference"
+    paper_url: "#"
+    code_url: ""
+    project_url: ""
+    bibtex: |
+      @inproceedings{yang2024regulating,
+        title={Regulating Model Reliance on Non-robust Features by Smoothing Input Marginal Density},
+        author={Yang, Peiyu and Akhtar, Naveed and Shah, Mubarak and Mian, Ajmal},
+        booktitle={ECCV},
+        year={2024}
+      }
+
+  - title: "SCTransNet: Spatial-channel Cross Transformer Network for Infrared Small Target Detection"
+    authors:
+      - "Shuai Yuan"
+      - "Hanlin Qin"
+      - "Xiang Yan"
+      - "Naveed Akhtar"
+      - "Ajmal Mian"
+    venue: "IEEE TGRS"
+    venue_full: "IEEE Transactions on Geoscience and Remote Sensing"
+    year: 2024
+    type: "journal"
+    paper_url: "#"
+    code_url: ""
+    project_url: ""
+    bibtex: |
+      @article{yuan2024sctransnet,
+        title={SCTransNet: Spatial-channel Cross Transformer Network for Infrared Small Target Detection},
+        author={Yuan, Shuai and Qin, Hanlin and Yan, Xiang and Akhtar, Naveed and Mian, Ajmal},
+        journal={IEEE Transactions on Geoscience and Remote Sensing},
+        year={2024}
+      }
+
+  - title: "Improved MLP Point Cloud Processing with High-Dimensional Positional Encoding"
+    authors:
+      - "Yanmei Zou"
+      - "Hongshan Yu"
+      - "Zhengeng Yang"
+      - "Zechuan Li"
+      - "Naveed Akhtar"
+    venue: "AAAI"
+    venue_full: "AAAI Conference on Artificial Intelligence"
+    year: 2024
+    type: "conference"
+    paper_url: "#"
+    code_url: ""
+    project_url: ""
+    bibtex: |
+      @inproceedings{zou2024improved,
+        title={Improved MLP Point Cloud Processing with High-Dimensional Positional Encoding},
+        author={Zou, Yanmei and Yu, Hongshan and Yang, Zhengeng and Li, Zechuan and Akhtar, Naveed},
+        booktitle={AAAI},
+        year={2024}
+      }
+
+  - title: "BAGM: A Backdoor Attack for Manipulating Text-to-Image Generative Models"
+    authors:
+      - "Jordan Vice"
+      - "Naveed Akhtar"
+      - "Richard I. Hartley"
+      - "Ajmal Mian"
+    venue: "IEEE TIFS"
+    venue_full: "IEEE Transactions on Information Forensics and Security"
+    year: 2024
+    type: "journal"
+    paper_url: "#"
+    code_url: ""
+    project_url: ""
+    bibtex: |
+      @article{vice2024bagm,
+        title={BAGM: A Backdoor Attack for Manipulating Text-to-Image Generative Models},
+        author={Vice, Jordan and Akhtar, Naveed and Hartley, Richard I. and Mian, Ajmal},
+        journal={IEEE Transactions on Information Forensics and Security},
+        year={2024}
+      }
+
+  - title: "Voxel-and Bird's-Eye-View-Based Semantic Scene Completion for LiDAR Point Clouds"
+    authors:
+      - "Li Liang"
+      - "Naveed Akhtar"
+      - "Jordan Vice"
+      - "Ajmal Mian"
+    venue: "Remote Sensing"
+    venue_full: "Remote Sensing, Vol. 16(13)"
+    year: 2024
+    type: "journal"
+    paper_url: "#"
+    code_url: ""
+    project_url: ""
+    bibtex: |
+      @article{liang2024voxel,
+        title={Voxel-and Bird's-Eye-View-Based Semantic Scene Completion for LiDAR Point Clouds},
+        author={Liang, Li and Akhtar, Naveed and Vice, Jordan and Mian, Ajmal},
+        journal={Remote Sensing},
+        volume={16},
+        number={13},
+        year={2024}
+      }
+
+  # 2023 Publications (placeholder entries for demonstration)
+  - title: "Adversarial Robustness of Deep Learning: Theory, Algorithms, and Applications"
+    authors:
+      - "Naveed Akhtar"
+      - "Ajmal Mian"
+    venue: "IEEE TPAMI"
+    venue_full: "IEEE Transactions on Pattern Analysis and Machine Intelligence"
+    year: 2023
+    type: "journal"
+    paper_url: "#"
+    code_url: ""
+    project_url: ""
+    bibtex: |
+      @article{akhtar2023adversarial,
+        title={Adversarial Robustness of Deep Learning: Theory, Algorithms, and Applications},
+        author={Akhtar, Naveed and Mian, Ajmal},
+        journal={IEEE Transactions on Pattern Analysis and Machine Intelligence},
+        year={2023}
+      }
+
+  - title: "Point Cloud Analysis with Deep Learning: A Survey"
+    authors:
+      - "Naveed Akhtar"
+      - "Ajmal Mian"
+    venue: "IJCV"
+    venue_full: "International Journal of Computer Vision"
+    year: 2023
+    type: "journal"
+    paper_url: "#"
+    code_url: ""
+    project_url: ""
+    bibtex: |
+      @article{akhtar2023pointcloud,
+        title={Point Cloud Analysis with Deep Learning: A Survey},
+        author={Akhtar, Naveed and Mian, Ajmal},
+        journal={International Journal of Computer Vision},
+        year={2023}
+      }

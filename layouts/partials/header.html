@@ -1,0 +1,34 @@
+<header class="site-header">
+  <div class="container">
+    <div class="header-inner">
+      <!-- Logo and Site Title -->
+      <div class="site-branding">
+        <a href="{{ .Site.BaseURL }}" class="logo-link">
+          <img src="/images/unimelb-logo.svg" alt="University of Melbourne" class="unimelb-logo">
+          <div class="site-title-group">
+            <span class="site-title">Computer Vision Group</span>
+            <span class="site-subtitle">The University of Melbourne</span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Mobile Menu Toggle -->
+      <button class="mobile-menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+
+      <!-- Navigation -->
+      <nav class="main-nav" role="navigation" aria-label="Main navigation">
+        <ul class="nav-list">
+          {{ range .Site.Menus.main }}
+          <li class="nav-item{{ if $.IsMenuCurrent "main" . }} active{{ end }}">
+            <a href="{{ .URL }}" class="nav-link">{{ .Name }}</a>
+          </li>
+          {{ end }}
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>

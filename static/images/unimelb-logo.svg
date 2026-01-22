@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" width="200" height="60">
+  <!-- Placeholder for University of Melbourne logo -->
+  <!-- Replace this with official logo from https://brand.unimelb.edu.au/ -->
+  <rect width="200" height="60" fill="#003366"/>
+  <text x="10" y="38" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="600" fill="white">University of Melbourne</text>
+</svg>

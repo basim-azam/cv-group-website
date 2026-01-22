@@ -1,0 +1,113 @@
+# Computer Vision Group - Research Themes
+# Edit this file to add/modify research areas
+
+themes:
+  - id: "adversarial-ml"
+    name: "Adversarial Machine Learning"
+    icon: "shield-alt"
+    short_description: "Developing robust AI systems resilient to adversarial attacks"
+    description: |
+      Our research in adversarial machine learning focuses on understanding and defending against
+      attacks that exploit vulnerabilities in deep learning models. We investigate both attack
+      methodologies and defense mechanisms, with the goal of creating more robust and trustworthy
+      AI systems for safety-critical applications.
+    key_topics:
+      - "Adversarial attack generation and analysis"
+      - "Robust training methods and certified defenses"
+      - "Backdoor attacks and detection"
+      - "Adversarial robustness in vision-language models"
+    featured_publications:
+      - "Regulating Model Reliance on Non-robust Features by Smoothing Input Marginal Density"
+      - "BAGM: A Backdoor Attack for Manipulating Text-to-Image Generative Models"
+    image: "/images/research/adversarial-ml.jpg"
+
+  - id: "point-clouds"
+    name: "3D Point Cloud Analysis"
+    icon: "cubes"
+    short_description: "Understanding 3D visual data for autonomous systems"
+    description: |
+      Point cloud analysis is fundamental to understanding 3D environments. Our research develops
+      novel deep learning methods for processing unstructured 3D point data, with applications
+      in autonomous driving, robotics, and scene understanding. We work on semantic segmentation,
+      object detection, and scene completion from LiDAR and depth sensor data.
+    key_topics:
+      - "Point cloud semantic segmentation"
+      - "3D object detection and tracking"
+      - "Scene completion and reconstruction"
+      - "Multi-modal 3D perception"
+    featured_publications:
+      - "Improved MLP Point Cloud Processing with High-Dimensional Positional Encoding"
+      - "Voxel-and Bird's-Eye-View-Based Semantic Scene Completion for LiDAR Point Clouds"
+    image: "/images/research/point-clouds.jpg"
+
+  - id: "explainable-ai"
+    name: "Explainable AI"
+    icon: "lightbulb"
+    short_description: "Making deep learning models interpretable and trustworthy"
+    description: |
+      As AI systems become more prevalent in critical decision-making, understanding their
+      reasoning is essential. Our explainable AI research develops methods to interpret
+      deep learning models, visualize learned representations, and provide human-understandable
+      explanations for model predictions. This work supports AI accountability and trust.
+    key_topics:
+      - "Attention visualization and interpretation"
+      - "Concept-based explanations"
+      - "Feature attribution methods"
+      - "Interpretable model architectures"
+    featured_publications: []
+    image: "/images/research/explainable-ai.jpg"
+
+  - id: "medical-imaging"
+    name: "Medical Image Analysis"
+    icon: "heartbeat"
+    short_description: "AI-powered diagnostics and medical image understanding"
+    description: |
+      We develop deep learning methods for medical image analysis to assist clinicians in
+      diagnosis and treatment planning. Our research spans multiple imaging modalities
+      including X-ray, CT, MRI, and histopathology. We emphasize interpretability and
+      reliability in our medical AI systems.
+    key_topics:
+      - "Medical image segmentation"
+      - "Disease detection and classification"
+      - "Interpretable medical AI"
+      - "Multi-modal medical imaging"
+    featured_publications: []
+    image: "/images/research/medical-imaging.jpg"
+
+  - id: "remote-sensing"
+    name: "Remote Sensing"
+    icon: "satellite"
+    short_description: "Earth observation and satellite image analysis"
+    description: |
+      Our remote sensing research applies advanced computer vision techniques to satellite
+      and aerial imagery for environmental monitoring, urban planning, and agricultural
+      applications. We work on hyperspectral image analysis, change detection, and
+      land use classification using deep learning.
+    key_topics:
+      - "Hyperspectral image analysis"
+      - "Object detection in satellite imagery"
+      - "Change detection"
+      - "Land cover classification"
+    featured_publications:
+      - "SCTransNet: Spatial-channel Cross Transformer Network for Infrared Small Target Detection"
+    image: "/images/research/remote-sensing.jpg"
+
+  - id: "deep-learning-vision"
+    name: "Deep Learning for Vision"
+    icon: "eye"
+    short_description: "Fundamental advances in visual representation learning"
+    description: |
+      We conduct foundational research in deep learning for computer vision, developing
+      novel architectures, training methods, and representation learning techniques.
+      Our work spans image classification, object detection, video understanding,
+      and vision-language models.
+    key_topics:
+      - "Visual representation learning"
+      - "Vision transformers and attention mechanisms"
+      - "Video understanding and tracking"
+      - "Vision-language models"
+    featured_publications:
+      - "Mono3DVLT: Monocular-Video-Based 3D Visual Language Tracking"
+      - "Motion-Grounded Video Reasoning: Understanding and Perceiving Motion at Pixel Level"
+      - "Beyond Human Perception: Understanding Multi-Object World from Monocular View"
+    image: "/images/research/deep-learning-vision.jpg"

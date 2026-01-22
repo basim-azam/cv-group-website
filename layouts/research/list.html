@@ -1,0 +1,53 @@
+{{ define "main" }}
+<section class="research-page">
+  <div class="container">
+    <header class="page-header">
+      <h1 class="page-title">Research</h1>
+      <p class="page-description">
+        Exploring the frontiers of computer vision and machine learning through fundamental
+        and applied research.
+      </p>
+    </header>
+
+    {{ .Content }}
+
+    <!-- Research Areas Grid -->
+    <section class="research-areas">
+      <h2 class="section-title">Research Areas</h2>
+      <div class="research-grid">
+        {{ range .Site.Data.research_themes.themes }}
+        <a href="/research/areas/{{ .id }}/" class="research-area-card">
+          <div class="card-icon">
+            {{ if eq .icon "shield-alt" }}<i class="fas fa-shield-alt"></i>
+            {{ else if eq .icon "cubes" }}<i class="fas fa-cubes"></i>
+            {{ else if eq .icon "lightbulb" }}<i class="fas fa-lightbulb"></i>
+            {{ else if eq .icon "heartbeat" }}<i class="fas fa-heartbeat"></i>
+            {{ else if eq .icon "satellite" }}<i class="fas fa-satellite"></i>
+            {{ else if eq .icon "eye" }}<i class="fas fa-eye"></i>
+            {{ else }}<i class="fas fa-microscope"></i>{{ end }}
+          </div>
+          <h3 class="card-title">{{ .name }}</h3>
+          <p class="card-description">{{ .short_description }}</p>
+          <span class="card-link">Learn more <i class="fas fa-arrow-right"></i></span>
+        </a>
+        {{ end }}
+      </div>
+    </section>
+
+    <!-- Current Projects -->
+    <section class="current-projects">
+      <h2 class="section-title">Collaboration & Funding</h2>
+      <div class="projects-content">
+        <p>
+          Our research is supported by competitive grants from the Australian Research Council (ARC),
+          industry partnerships, and international collaborations. We work closely with leading
+          research groups worldwide to advance the state of the art in computer vision.
+        </p>
+        <div class="collaboration-logos">
+          <!-- Placeholder for collaboration/funding logos -->
+        </div>
+      </div>
+    </section>
+  </div>
+</section>
+{{ end }}

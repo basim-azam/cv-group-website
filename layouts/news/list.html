@@ -1,0 +1,45 @@
+{{ define "main" }}
+<section class="news-page">
+  <div class="container">
+    <header class="page-header">
+      <h1 class="page-title">News</h1>
+      <p class="page-description">
+        Latest updates, announcements, and achievements from our research group.
+      </p>
+    </header>
+
+    {{ .Content }}
+
+    <div class="news-timeline">
+      {{ range .Pages.ByDate.Reverse }}
+      <article class="news-entry">
+        <div class="news-date-block">
+          <span class="day">{{ .Date.Format "02" }}</span>
+          <span class="month">{{ .Date.Format "Jan" }}</span>
+          <span class="year">{{ .Date.Format "2006" }}</span>
+        </div>
+        <div class="news-content-block">
+          <h2 class="news-title">
+            <a href="{{ .Permalink }}">{{ .Title }}</a>
+          </h2>
+          {{ with .Params.tags }}
+          <div class="news-tags">
+            {{ range . }}
+            <span class="tag tag-{{ . | urlize }}">{{ . }}</span>
+            {{ end }}
+          </div>
+          {{ end }}
+          <div class="news-excerpt">
+            {{ .Summary | truncate 300 }}
+          </div>
+          <a href="{{ .Permalink }}" class="read-more">Read more <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </article>
+      {{ end }}
+    </div>
+
+    <!-- Pagination -->
+    {{ template "_internal/pagination.html" . }}
+  </div>
+</section>
+{{ end }}

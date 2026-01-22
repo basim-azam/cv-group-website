@@ -1,0 +1,135 @@
+{{ define "main" }}
+<!-- Hero Section -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <h1 class="hero-title">Computer Vision Group</h1>
+      <p class="hero-subtitle">The University of Melbourne</p>
+      <p class="hero-description">
+        Advancing the frontiers of computer vision and machine learning through
+        innovative research in adversarial robustness, explainable AI, 3D perception,
+        and visual understanding.
+      </p>
+      <div class="hero-actions">
+        <a href="/research/" class="btn btn-primary">Our Research</a>
+        <a href="/join/" class="btn btn-secondary">Join Us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Stats Section -->
+<section class="stats-section">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item">
+        <span class="stat-number">{{ .Site.Params.stats.publications }}</span>
+        <span class="stat-label">Publications</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">{{ .Site.Params.stats.citations }}</span>
+        <span class="stat-label">Citations</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">{{ .Site.Params.stats.team_members }}</span>
+        <span class="stat-label">Team Members</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">{{ .Site.Params.stats.research_areas }}</span>
+        <span class="stat-label">Research Areas</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Featured Research Section -->
+<section class="featured-research">
+  <div class="container">
+    <h2 class="section-title">Research Highlights</h2>
+    <div class="research-grid">
+      {{ range .Site.Params.featured_research }}
+      <div class="research-card">
+        <div class="research-icon">
+          {{ if eq .icon "shield" }}<i class="fas fa-shield-alt"></i>
+          {{ else if eq .icon "lightbulb" }}<i class="fas fa-lightbulb"></i>
+          {{ else if eq .icon "cube" }}<i class="fas fa-cube"></i>
+          {{ else }}<i class="fas fa-microscope"></i>{{ end }}
+        </div>
+        <h3 class="research-title">{{ .name }}</h3>
+        <p class="research-description">{{ .description }}</p>
+      </div>
+      {{ end }}
+    </div>
+    <div class="section-cta">
+      <a href="/research/" class="btn btn-outline">View All Research Areas</a>
+    </div>
+  </div>
+</section>
+
+<!-- News Section -->
+<section class="news-section">
+  <div class="container">
+    <h2 class="section-title">Latest News</h2>
+    <div class="news-list">
+      {{ $news := where .Site.RegularPages "Section" "news" }}
+      {{ range first 3 $news.ByDate.Reverse }}
+      <article class="news-item">
+        <div class="news-date">
+          <span class="day">{{ .Date.Format "02" }}</span>
+          <span class="month">{{ .Date.Format "Jan" }}</span>
+          <span class="year">{{ .Date.Format "2006" }}</span>
+        </div>
+        <div class="news-content">
+          <h3 class="news-title">
+            <a href="{{ .Permalink }}">{{ .Title }}</a>
+          </h3>
+          <p class="news-excerpt">{{ .Summary | truncate 150 }}</p>
+          {{ with .Params.tags }}
+          <div class="news-tags">
+            {{ range . }}
+            <span class="tag">{{ . }}</span>
+            {{ end }}
+          </div>
+          {{ end }}
+        </div>
+      </article>
+      {{ end }}
+    </div>
+    <div class="section-cta">
+      <a href="/news/" class="btn btn-outline">View All News</a>
+    </div>
+  </div>
+</section>
+
+<!-- Recent Publications Section -->
+<section class="publications-section">
+  <div class="container">
+    <h2 class="section-title">Recent Publications</h2>
+    <div class="publications-list">
+      {{ $pubs := .Site.Data.publications.publications }}
+      {{ range first 4 $pubs }}
+      <div class="publication-item">
+        <h4 class="pub-title">{{ .title }}</h4>
+        <p class="pub-authors">
+          {{ range $i, $author := .authors }}{{ if $i }}, {{ end }}{{ if eq $author "Naveed Akhtar" }}<strong>{{ $author }}</strong>{{ else }}{{ $author }}{{ end }}{{ end }}
+        </p>
+        <p class="pub-venue">
+          <span class="venue">{{ .venue_full }}</span>,
+          <span class="year">{{ .year }}</span>
+        </p>
+        {{ with .paper_url }}
+        {{ if ne . "#" }}
+        <a href="{{ . }}" class="pub-link" target="_blank" rel="noopener">
+          <i class="fas fa-file-pdf"></i> Paper
+        </a>
+        {{ end }}
+        {{ end }}
+      </div>
+      {{ end }}
+    </div>
+    <div class="section-cta">
+      <a href="/publications/" class="btn btn-outline">View All Publications</a>
+    </div>
+  </div>
+</section>
+{{ end }}

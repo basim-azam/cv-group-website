@@ -1,0 +1,163 @@
+{{ define "main" }}
+<section class="publications-page">
+  <div class="container">
+    <header class="page-header">
+      <h1 class="page-title">Publications</h1>
+      <p class="page-description">
+        Our research contributions to computer vision, machine learning, and artificial intelligence.
+      </p>
+      <p class="scholar-link">
+        For a complete publication list, visit
+        <a href="{{ .Site.Params.google_scholar }}" target="_blank" rel="noopener">
+          <i class="fas fa-graduation-cap"></i> Google Scholar
+        </a>
+      </p>
+    </header>
+
+    {{ .Content }}
+
+    <!-- Filter Controls -->
+    <div class="publications-filter">
+      <div class="filter-group">
+        <label for="year-filter">Year:</label>
+        <select id="year-filter" class="filter-select">
+          <option value="all">All Years</option>
+          <option value="2025">2025</option>
+          <option value="2024">2024</option>
+          <option value="2023">2023</option>
+          <option value="2022">2022</option>
+          <option value="2021">2021</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label for="type-filter">Type:</label>
+        <select id="type-filter" class="filter-select">
+          <option value="all">All Types</option>
+          <option value="conference">Conference</option>
+          <option value="journal">Journal</option>
+        </select>
+      </div>
+      <div class="filter-group search-group">
+        <label for="search-filter">Search:</label>
+        <input type="text" id="search-filter" class="filter-input" placeholder="Search titles, authors...">
+      </div>
+    </div>
+
+    <!-- Publications List -->
+    <div class="publications-list" id="publications-list">
+      {{ $years := slice }}
+      {{ range .Site.Data.publications.publications }}
+        {{ $years = $years | append .year }}
+      {{ end }}
+      {{ $uniqueYears := uniq $years | sort | reverse }}
+
+      {{ range $year := $uniqueYears }}
+      <div class="year-section" data-year="{{ $year }}">
+        <h2 class="year-heading">{{ $year }}</h2>
+        {{ range where $.Site.Data.publications.publications "year" $year }}
+        <article class="publication-entry" data-type="{{ .type }}" data-year="{{ .year }}">
+          <h3 class="pub-title">{{ .title }}</h3>
+          <p class="pub-authors">
+            {{ range $i, $author := .authors }}{{ if $i }}, {{ end }}{{ if eq $author "Naveed Akhtar" }}<strong>{{ $author }}</strong>{{ else }}{{ $author }}{{ end }}{{ end }}
+          </p>
+          <p class="pub-venue">
+            <span class="venue-name">{{ .venue_full }}</span>
+            <span class="pub-type-badge {{ .type }}">{{ .type }}</span>
+          </p>
+          <div class="pub-links">
+            {{ with .paper_url }}
+            {{ if ne . "#" }}
+            <a href="{{ . }}" class="pub-link" target="_blank" rel="noopener">
+              <i class="fas fa-file-pdf"></i> Paper
+            </a>
+            {{ end }}
+            {{ end }}
+            {{ with .code_url }}
+            {{ if ne . "" }}
+            <a href="{{ . }}" class="pub-link" target="_blank" rel="noopener">
+              <i class="fab fa-github"></i> Code
+            </a>
+            {{ end }}
+            {{ end }}
+            {{ with .project_url }}
+            {{ if ne . "" }}
+            <a href="{{ . }}" class="pub-link" target="_blank" rel="noopener">
+              <i class="fas fa-globe"></i> Project
+            </a>
+            {{ end }}
+            {{ end }}
+            <button class="pub-link bibtex-toggle" data-bibtex="{{ .bibtex | htmlEscape }}">
+              <i class="fas fa-quote-right"></i> BibTeX
+            </button>
+          </div>
+          <div class="bibtex-content" style="display: none;">
+            <pre><code>{{ .bibtex }}</code></pre>
+          </div>
+        </article>
+        {{ end }}
+      </div>
+      {{ end }}
+    </div>
+
+    <div class="no-results" id="no-results" style="display: none;">
+      <p>No publications found matching your criteria.</p>
+    </div>
+  </div>
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const yearFilter = document.getElementById('year-filter');
+  const typeFilter = document.getElementById('type-filter');
+  const searchFilter = document.getElementById('search-filter');
+  const publications = document.querySelectorAll('.publication-entry');
+  const yearSections = document.querySelectorAll('.year-section');
+  const noResults = document.getElementById('no-results');
+
+  function filterPublications() {
+    const year = yearFilter.value;
+    const type = typeFilter.value;
+    const search = searchFilter.value.toLowerCase();
+    let visibleCount = 0;
+
+    publications.forEach(pub => {
+      const pubYear = pub.dataset.year;
+      const pubType = pub.dataset.type;
+      const pubText = pub.textContent.toLowerCase();
+
+      const yearMatch = year === 'all' || pubYear === year;
+      const typeMatch = type === 'all' || pubType === type;
+      const searchMatch = search === '' || pubText.includes(search);
+
+      if (yearMatch && typeMatch && searchMatch) {
+        pub.style.display = 'block';
+        visibleCount++;
+      } else {
+        pub.style.display = 'none';
+      }
+    });
+
+    // Show/hide year sections based on visible publications
+    yearSections.forEach(section => {
+      const visibleInSection = section.querySelectorAll('.publication-entry[style="display: block;"]');
+      section.style.display = visibleInSection.length > 0 ? 'block' : 'none';
+    });
+
+    noResults.style.display = visibleCount === 0 ? 'block' : 'none';
+  }
+
+  yearFilter.addEventListener('change', filterPublications);
+  typeFilter.addEventListener('change', filterPublications);
+  searchFilter.addEventListener('input', filterPublications);
+
+  // BibTeX toggle
+  document.querySelectorAll('.bibtex-toggle').forEach(btn => {
+    btn.addEventListener('click', function() {
+      const entry = this.closest('.publication-entry');
+      const bibtex = entry.querySelector('.bibtex-content');
+      bibtex.style.display = bibtex.style.display === 'none' ? 'block' : 'none';
+    });
+  });
+});
+</script>
+{{ end }}
